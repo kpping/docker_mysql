@@ -11,14 +11,14 @@ sudo chmod +x build.sh
 
 ```
 
-docker start MYSQL_5.6
+docker start MYSQL5.6
 ```
 
 # Stop
 
 ```
 
-docker stop MYSQL_5.6
+docker stop MYSQL5.6
 ```
 
 # Allow host to connect
@@ -27,19 +27,14 @@ docker stop MYSQL_5.6
 ```
 
 # in host
-docker exec -it MYSQL_5.6 mysql -uroot -p
+docker exec -it MYSQL5.6 mysql --user=root --password=root
 
 # in container
 CREATE USER 'host'@'localhost' IDENTIFIED BY 'host';
-
 GRANT ALL PRIVILEGES ON *.* TO 'host'@'localhost' WITH GRANT OPTION;
-
 CREATE USER 'host'@'%' IDENTIFIED BY 'host';
-
 GRANT ALL PRIVILEGES ON *.* TO 'host'@'%' WITH GRANT OPTION;
-
 FLUSH PRIVILEGES;
-
 EXIT;
 ```
 
