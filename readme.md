@@ -7,6 +7,20 @@ sudo chmod +x build.sh
 ./build.sh
 ```
 
+# Start
+
+```
+
+docker start MYSQL_5.6
+```
+
+# Stop
+
+```
+
+docker stop MYSQL_5.6
+```
+
 # Allow host to connect
 
 
