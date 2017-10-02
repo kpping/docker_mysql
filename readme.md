@@ -11,14 +11,14 @@ sudo chmod +x build.sh
 
 ```
 
-docker start MYSQL5.6
+docker start MYSQL<TAG>
 ```
 
 # Stop
 
 ```
 
-docker stop MYSQL5.6
+docker stop MYSQL<TAG>
 ```
 
 # Allow host to connect
@@ -27,7 +27,7 @@ docker stop MYSQL5.6
 ```
 
 # in host
-docker exec -it MYSQL5.6 mysql --user=root --password=root
+docker exec -it MYSQL<TAG> mysql --user=root --password=root
 
 # in container
 CREATE USER 'host'@'localhost' IDENTIFIED BY 'host';
